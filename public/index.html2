@@ -1,4 +1,3 @@
-#<h1>Hello, Rails!</h1>
 <head>
   <title>Флэшкарточкер</title>
   <link rel="stylesheet" href="application.css">
