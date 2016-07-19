@@ -11,10 +11,16 @@
  -->    </header>
 
     <section>
-      <%= link_to 'Все карточки', controller: 'cards_controller' %>
       <p style="font-size: 22px;">
-        Первый в мире удобный менеджер флеш-карточек. Именно так.
+        ВСЕ КАРТОЧКИ:
       </p>
+      <% @cards.each do |card|%>
+        <tr>
+          <td><%=card.review_date %></td> ==
+          <td><%=card.original_text %></td> ==
+          <td><%=card.translated_text %></td> <br> 
+        </tr>
+      <% end %>
     </section>
 
   </section>

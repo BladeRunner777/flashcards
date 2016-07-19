@@ -7,6 +7,10 @@ class WelcomeController < ApplicationController
     @card = Card.new
   end  
 
+  def show
+     @card = Card.find(params[:id])
+  end
+  
   def create
   	@card = Card.new(params[:card])
 
