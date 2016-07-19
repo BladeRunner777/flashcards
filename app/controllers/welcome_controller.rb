@@ -1,11 +1,19 @@
 class WelcomeController < ApplicationController
   def index
+    @card = Card.all
   end
+
+  def new
+    @card = Card.new
+  end  
 
   def create
   	@card = Card.new(params[:card])
 
-    @card.save
-    redirect_to @card
+    if @card.save
+      redirect_to @card
+    else
+      render 'new'
+    end
   end
 end
