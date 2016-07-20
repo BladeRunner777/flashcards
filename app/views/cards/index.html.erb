@@ -1,26 +1,20 @@
-<body>
-  <section id="container">
-
-    <header class="clearfix">
-<!--    <h1>Флэшкарточкер</h1>
+<!--    <header class="clearfix">
+    <h1>Флэшкарточкер</h1>
      	<ul class="navigation-links">
         <li><a href="#">Все карточки</a></li>
         <li><a href="#">Добавить карточку</a></li>
       </ul>
- -->    </header>
-
-    <section>
-      <p style="font-size: 22px;">
-        ВСЕ КАРТОЧКИ:
-      </p>
-      <% @cards.each do |card|%>
-        <tr>
-          <td><%=card.review_date %></td> ==
-          <td><%=card.original_text %></td> ==
-          <td><%=card.translated_text %></td> <br> 
-        </tr>
-      <% end %>
-    </section>
-
-  </section>
-</body>
+     </header>
+-->
+<section>
+  <p style="font-size: 22px;">
+    ВСЕ КАРТОЧКИ:
+  </p>
+  <% @cards.each do |card|%>
+    <tr>
+      <td><%=card.review_date %></td> ==
+      <td><%=card.original_text %></td> ==
+      <td><%=card.translated_text %></td> <br> 
+    </tr>
+  <% end %>
+</section>
