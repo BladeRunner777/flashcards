@@ -1,11 +1,3 @@
-<!--    <header class="clearfix">
-    <h1>Флэшкарточкер</h1>
-     	<ul class="navigation-links">
-        <li><a href="#">Все карточки</a></li>
-        <li><a href="#">Добавить карточку</a></li>
-      </ul>
-     </header>
--->
 <section>
   <p style="font-size: 22px;">
     ВСЕ КАРТОЧКИ:
@@ -17,4 +9,7 @@
       <td><%=card.translated_text %></td> <br> 
     </tr>
   <% end %>
+  <br>
+  <%= link_to 'Назад', root_path %>   
+
 </section>
