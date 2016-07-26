@@ -19,7 +19,7 @@ class CardsController < ApplicationController
   end
 
   def update
-    @card = Article.find(params[:id])
+    @card = Card.find(params[:id])
  
     if @card.update(card_params)
       redirect_to @card
@@ -27,7 +27,7 @@ class CardsController < ApplicationController
       render 'edit'
     end
   end
-  
+
   def show
     @card = Card.find(params[:id])
   end

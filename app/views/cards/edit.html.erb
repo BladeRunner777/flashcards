@@ -17,7 +17,7 @@
     </div>
   <% end %>
 
-  <%= form_for :card, url: cards_path, method: :PATCH do |f| %>
+  <%= form_for :card, url: card_path(@card), method: :patch do |f| %>
     <p>
       <%= f.label :original_text %><br>
       <%= f.text_field :original_text %>
