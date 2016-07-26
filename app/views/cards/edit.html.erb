@@ -1,6 +1,6 @@
 <section>
   <p style="font-size: 22px;">
-    НОВАЯ КАРТОЧКА:
+    РЕДАКТИРУЕТСЯ КАРТОЧКА:
   </p>
 
   <% if @card.errors.any? %>
@@ -17,7 +17,7 @@
     </div>
   <% end %>
 
-  <%= form_for :card, url: cards_path do |f| %>
+  <%= form_for :card, url: cards_path, method: :PATCH do |f| %>
     <p>
       <%= f.label :original_text %><br>
       <%= f.text_field :original_text %>
@@ -29,7 +29,7 @@
     </p>
    
     <p>
-      <%= f.submit 'Сохранить'%>
+      <%= f.submit 'Обновить'%>
     </p>
   <% end %>
 
