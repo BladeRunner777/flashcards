@@ -7,7 +7,9 @@
       <td><%=card.review_date %></td> ==
       <td><%=card.original_text %></td> ==
       <td><%=card.translated_text %></td>  
-      <td><%= link_to 'Изменить карточку ', edit_card_path(card) %> </td> <br> 
+      <td><%= link_to 'Изменить  ', edit_card_path(card) %> </td>   
+      <td><%= link_to 'Удалить  ', cards_path(card),
+        :method => :delete %> </td><br> 
     </tr>
   <% end %>
   <br>

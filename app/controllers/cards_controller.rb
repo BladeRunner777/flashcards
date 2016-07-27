@@ -20,6 +20,7 @@ class CardsController < ApplicationController
 
   def update
     @card = Card.find(params[:id])
+    @card.review_date = 3.days.from_now(time = ::Time.current)
  
     if @card.update(card_params)
       redirect_to @card
@@ -39,8 +40,8 @@ class CardsController < ApplicationController
   def destroy
     @card = Card.find(params[:id])
     @card.destroy
-
-    redirect_to card_path 
+    
+    redirect_to cards_path 
   end
 
   private
