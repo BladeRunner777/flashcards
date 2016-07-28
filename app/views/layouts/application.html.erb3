@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Флэшкарточкер</title>
+    <link rel="stylesheet" href="application.css">
+  </head>
+
+  <body>
+   <%=yield%>
+  </body>
+</html>

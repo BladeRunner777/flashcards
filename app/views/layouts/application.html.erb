@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
-    <title>Флэшкарточкер</title>
-    <link rel="stylesheet" href="application.css">
-  </head>
+<head>
+  <title>Flashcards</title>
+  <link rel="stylesheet" href="application.css">
+  <%= stylesheet_link_tag    'application' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
 
   <body>
    <%=yield%>
   </body>
-</html>
