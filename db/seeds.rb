@@ -12,23 +12,16 @@ require 'open-uri'
 #подключаем Nokogiri
 require 'nokogiri'
 
+Card.delete_all
 page = Nokogiri::HTML(open("http://www.languagedaily.com/learn-german/vocabulary/common-german-words"))
-#p page.css('body')
-
-50.times do |index|
-  index = index + 2
-  css = '#jsn-mainbody > div.com-content > div > div.jsn-article-content > table > tbody > tr:nth-child(' + index.to_s + ') > td.bigLetter'
-  css2 = '#jsn-mainbody > div.com-content > div > div.jsn-article-content > table > tbody > tr:nth-child(' + index.to_s + ') > td:nth-child(3)'
-
-  p index
-  p page.css(css).text
-  p page.css(css2).text
+page.css('table tr')[1..-1].each {|tr|
+  puts "#{tr.css('td:eq(2)').text} - #{tr.css('td:eq(3)').text}" 
 
   Card.create!([{
-  original_text: page.css(css).text,
-  translated_text: page.css(css2).text
+  original_text: tr.css('td:eq(2)').text,
+  translated_text: tr.css('td:eq(3)').text
   }])
-end
+}
 
 =begin
 Card.create!([{
