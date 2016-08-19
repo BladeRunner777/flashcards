@@ -6,10 +6,27 @@
       </ul>
  -->    </header>
 
+  <p style="font-size: 22px;">
+    Случайная карточка:
+  </p>  <br>
+
+  <%= form_for :card, url: card_path(@card), method: :patch do |f| %>
+    <p>
+      <%= f.label :original_text %><br>
+      <%= f.text_field :original_text %>
+    </p>
+   
+    <p>
+      <%= f.submit 'Проверить'%>
+    </p>
+  <% end %>
+
     <section>
       <%= link_to 'Все карточки', cards_path %> <br>
       <%= link_to 'Добавить карточку', new_card_path %>
-      <p style="font-size: 22px;">
+    </section>
+
+<!--       <p style="font-size: 22px;">
         Первый в мире удобный менеджер флеш-карточек. Именно так.
       </p>
-    </section>
+ -->
