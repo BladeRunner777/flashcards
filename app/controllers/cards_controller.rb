@@ -28,9 +28,6 @@ class CardsController < ApplicationController
     end
   end
 
-  def random
-    @card = Card.all.where(:review_date <= Time.now).randon(1)
-  end
 
   def show
     @card = Card.find(params[:id])

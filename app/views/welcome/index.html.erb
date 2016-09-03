@@ -9,7 +9,7 @@
   <p style="font-size: 22px;">
     Случайная карточка:
   </p>  <br>
-
+  
   <%= form_for :card, url: card_path(@card), method: :patch do |f| %>
     <p>
       <%= f.label :original_text %><br>
@@ -17,7 +17,12 @@
     </p>
    
     <p>
-      <%= f.submit 'Проверить'%>
+      <%= f.label :translated_text %><br>
+      <%= f.text_field :translated_text %>
+    </p>
+   
+    <p>
+      <%= f.submit 'Обновить'%>
     </p>
   <% end %>
 

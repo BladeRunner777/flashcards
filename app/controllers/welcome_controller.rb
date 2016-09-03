@@ -1,7 +1,8 @@
 class WelcomeController < ApplicationController
   def index
-    @card = Card.all
-  end
+    @cards = Card.all
+    @card = Card.(params[1])
+end
 
   def new
     @card = Card.new
@@ -20,4 +21,9 @@ class WelcomeController < ApplicationController
       render 'new'
     end
   end
+
+  private
+    def card_params
+      params.require(:card).permit(:original_text, :translated_text, :review_date)
+    end
 end
